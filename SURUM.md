@@ -2,7 +2,7 @@
 
 - Kit sürümü: **0.2.0** (19-11-2026) — ana uygulamanın gerçek Kontrol + Simülasyon sekmeleri (`uygulama/`) ve sahte sunucu
   (`sunucu/`) eklendi; eski panel şablonu (`arayuz/`) kaldırıldı. 0.1.0: modül çekirdeği + şablon sürücü + sahte kart + kabul testleri.
-- Kaynak: ana depo dal `ozellik/canli-alan-moduller` @ `e64c3f0b`.
+- Kaynak: ana depo dal `ozellik/canli-alan-moduller` @ `9e4c37c0`.
   - `servers/modul_*.py`, `servers/alt_surec.py`, `utils/gizli_surec.py` **BİREBİR** kopyadır; değiştirmeyin (birleştirmede ana
     depodaki sürüm kullanılır). Değişiklik gerekiyorsa koordinatöre bildirin.
   - `uygulama/src/` ana depodaki `apps/ui/src/`'nin Kontrol + Simülasyon sekmelerinin kullandığı dosyalardır (birebir). Kitte
