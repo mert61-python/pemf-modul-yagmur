@@ -1,4 +1,4 @@
-# PEMF modül kiti — birleşmeye hazır teslim için ana uygulamanın eşiklerini uygular (yerel; depo açılınca etkin olur).
+# PEMF modül kiti — birleşmeye hazır teslim için ana uygulamanın eşiklerini uygular.
 name: modul-ci
 on: [push, pull_request]
 jobs:
@@ -11,15 +11,32 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
-      - run: python -m pip install pytest==8.3.4 pytest-cov==6.0.0 ruff==0.15.20
+      - run: python -m pip install pytest==8.3.4 pytest-cov==6.0.0 ruff==0.15.20 fastapi==0.136.3 uvicorn==0.48.0 httpx==0.28.1
       - name: ruff (lint + biçim)
         run: |
-          python -m ruff check moduller testler
-          python -m ruff format --check moduller testler
+          python -m ruff check moduller testler sunucu
+          python -m ruff format --check moduller testler sunucu
       - name: surucu denetleyicisi (ag / disk / alt surec / kesif / MQTT kurallari)
         run: python -c "from servers.modul_denetleyici import main; raise SystemExit(main(['moduller/%PEMF_KIT_MODUL%']))"
         shell: cmd
-      - name: kabul testleri + surucu kapsami %100
+      - name: kabul + sahte sunucu testleri + surucu kapsami %100
         run: python -m pytest testler -q -rfEs --cov=moduller --cov-config=.coveragerc --cov-report=term-missing --cov-fail-under=100
-      - name: panel metinleri TR + EN eslesik
+      - name: arayuz metinleri TR + EN eslesik
         run: python araclar/i18n_esle.py
+  uygulama:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: uygulama
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: uygulama/package-lock.json
+      - run: npm ci --legacy-peer-deps
+      - name: tip denetimi (0 hata)
+        run: npm run typecheck
+      - name: web derlemesi
+        run: npm run export:web

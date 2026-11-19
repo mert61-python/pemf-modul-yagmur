@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "PEMF geliştirici kabuğu",
+    "slug": "pemf-gelistirici-kabugu",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "scheme": "pemfgelistirici",
+    "userInterfaceStyle": "dark",
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-font"
+    ]
+  }
+}
