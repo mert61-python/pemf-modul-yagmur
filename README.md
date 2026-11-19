@@ -1,5 +1,9 @@
 # PEMF kontrol modülü kiti
 
+> **Bu depo Yağmur'un kontrol modülü içindir.** Bağlantıyla paylaşıldı; herkes okuyabilir. Doğrudan kod göndermek için GitHub
+> kullanıcı adınızı koordinatöre iletin, depoya **bakım (maintain)** yetkisiyle eklenirsiniz. O zamana kadar depoyu *fork* edip
+> çekme isteği (PR) açabilirsiniz. İlk iş: aşağıdaki **Hızlı başlangıç** adım 1 ile kendi modül kimliğinizi oluşturun.
+
 Bu kit, PEMF uygulamasının **Kontrol** sekmesine kendi kartınızla ve kendi bobininizle bir **modül** eklemeniz için hazırlandı.
 Kart, kart yazılımı ve bağlantı (seri, Wi-Fi, BLE, USB) tamamen sizindir. Ana uygulama yalnızca **kuralları** koyar; kurallar bu kitteki
 testlerle ve denetleyiciyle ölçülür. Kuralları geçmeyen modül ana uygulamaya birleştirilmez.
