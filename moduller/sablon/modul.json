@@ -1,0 +1,19 @@
+{
+  "sema": 1,
+  "kimlik": "sablon",
+  "ad": {"tr": "Ad Soyad — modül adı", "en": "Name Surname — module name"},
+  "gelistirici": "Ad Soyad <eposta>",
+  "surum": "0.1.0",
+  "baglanti": "sahte",
+  "baglanti_ayrinti": {"boru": "pemf-sablon-kart"},
+  "sinirlar": {"frekans_hz": [1, 500], "duty_yuzde": [0, 50], "sure_dk": [0, 60]},
+  "bekci_ms": 1500,
+  "kart": {
+    "mikroislemci": "yok (sahte_kart.py — bilgisayarda ayrı süreç)",
+    "surme_karti": "yok",
+    "baglanti": "yerel adlandırılmış boru",
+    "bobin": "yok (benzetim)",
+    "akim_siniri_a": 0,
+    "bekci_ms": 1500
+  }
+}

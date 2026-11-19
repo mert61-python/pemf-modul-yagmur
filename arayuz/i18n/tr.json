@@ -1,0 +1,14 @@
+{
+  "modulSablon": {
+    "baslik": "Modül adı — kart adı",
+    "frekans": "Frekans (Hz)",
+    "duty": "Duty (%)",
+    "sure": "Süre (dk)",
+    "uygula": "Uygula",
+    "baslat": "Başlat",
+    "durdur": "Durdur",
+    "durumYok": "Durum bekleniyor…",
+    "bobinAcik": "Bobin açık",
+    "bobinKapali": "Bobin kapalı"
+  }
+}

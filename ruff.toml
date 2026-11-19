@@ -1,0 +1,6 @@
+# ana depo (pyproject.toml [tool.ruff]) ile AYNI biçim kuralları
+target-version = "py310"
+line-length = 120
+
+[format]
+quote-style = "preserve"

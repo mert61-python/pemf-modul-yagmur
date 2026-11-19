@@ -1,0 +1,14 @@
+{
+  "modulSablon": {
+    "baslik": "Module name — board name",
+    "frekans": "Frequency (Hz)",
+    "duty": "Duty (%)",
+    "sure": "Duration (min)",
+    "uygula": "Apply",
+    "baslat": "Start",
+    "durdur": "Stop",
+    "durumYok": "Waiting for status…",
+    "bobinAcik": "Coil on",
+    "bobinKapali": "Coil off"
+  }
+}

@@ -1,0 +1,3 @@
+[run]
+# sahte kart TEST ARACIDIR (ölçü sürücünüzün kendisi)
+omit = */sahte_kart.py
