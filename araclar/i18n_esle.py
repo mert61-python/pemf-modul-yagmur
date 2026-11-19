@@ -15,6 +15,7 @@ def anahtarlar(d, on=""):
 
 
 def main() -> int:
+    sys.stdout.reconfigure(encoding="utf-8")  # Windows konsolu (cp1252 / cp1254) Türkçe harfte düşmesin
     tr_dosya = {p.name for p in (KOK / "tr").glob("*.json")}
     en_dosya = {p.name for p in (KOK / "en").glob("*.json")}
     hata = 0
